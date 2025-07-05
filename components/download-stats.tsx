@@ -106,7 +106,7 @@ export function DownloadStats({
           </Chip>
         </div>
 
-        {showBreakdown && downloadSources.length > 1 && (
+        {showBreakdown && (
           <div className="space-y-3">
             <div className="text-sm text-default-500 font-medium">
               Breakdown by Source:
