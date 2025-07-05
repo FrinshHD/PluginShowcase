@@ -5,14 +5,12 @@ export const siteConfig = {
   description:
     "A showcase for Minecraft plugins. Explore a variety of plugins.",
 
-  // Brand configuration
   brand: {
     name: "Codearray.dev",
     tagline: "A small development team creating open-source projects",
-    logo: "/next.svg", // Path to logo image
+    logo: "/next.svg",
   },
 
-  // Homepage configuration
   homepage: {
     hero: {
       title: "Codearray.dev",
@@ -59,9 +57,8 @@ export const siteConfig = {
     ],
   },
 
-  // About page configuration
   about: {
-    mode: "coming-soon", // "coming-soon" | "detailed"
+    mode: "coming-soon",
     comingSoon: {
       title: "Coming Soon",
       message:
@@ -81,7 +78,6 @@ export const siteConfig = {
     },
   },
 
-  // Error pages configuration
   errorPages: {
     notFound: {
       icon: "🔍",
@@ -112,7 +108,6 @@ export const siteConfig = {
     },
   },
 
-  // Navigation configuration
   navItems: [
     {
       label: "Home",
@@ -128,13 +123,11 @@ export const siteConfig = {
     },
   ],
 
-  // External links configuration
   links: {
     github: "https://github.com/frinshhd",
     discord: "https://codearray.dev/discord",
   },
 
-  // Footer configuration
   footer: {
     sections: [
       {
@@ -164,7 +157,6 @@ export const siteConfig = {
     copyright: "© 2025 Codearray.dev. All rights reserved.",
   },
 
-  // SEO configuration
   seo: {
     defaultTitle: "PluginShowcase - Minecraft Plugins by Codearray.dev",
     titleTemplate: "%s | PluginShowcase",
@@ -183,7 +175,6 @@ export const siteConfig = {
     twitterHandle: "@codearray",
   },
 
-  // Theme configuration
   theme: {
     colors: {
       primary: "violet",

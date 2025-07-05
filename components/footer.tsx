@@ -2,7 +2,7 @@ import { Divider } from "@heroui/divider";
 import { Link } from "@heroui/link";
 import { Button } from "@heroui/button";
 import NextLink from "next/link";
-import { GithubIcon, TwitterIcon, DiscordIcon } from "@/components/icons";
+import { GithubIcon, DiscordIcon } from "@/components/icons";
 import { siteConfig } from "@/config/site";
 
 const Footer = () => {

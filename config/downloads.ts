@@ -1,30 +1,26 @@
-// Download sources configuration
 export const downloadConfig = {
-  // API endpoints
   apis: {
     github: "https://api.github.com",
     modrinth: "https://api.modrinth.com/v2",
     curseforge: "https://api.curseforge.com/v1",
-    spigot: "https://api.spigotmc.org/simple/0.2", // Unofficial API
-    bukkit: "https://servermods.forgesvc.net/servermods", // Legacy endpoint
+    spigot: "https://api.spigotmc.org/simple/0.2",
+    bukkit: "https://servermods.forgesvc.net/servermods",
   },
 
-  // Rate limiting settings (requests per minute)
   rateLimits: {
-    github: 60, // GitHub allows 60 requests per hour for unauthenticated requests
-    modrinth: 300, // Modrinth has generous rate limits
-    curseforge: 600, // With API key
-    spigot: 30, // Conservative limit for unofficial API
-    bukkit: 30, // Conservative limit
+    github: 60,
+    modrinth: 300,
+    curseforge: 600,
+    spigot: 30,
+    bukkit: 30,
   },
 
-  // Cache settings (in minutes)
   cacheTtl: {
-    github: 60, // Cache GitHub data for 1 hour
-    modrinth: 60, // Cache Modrinth data for 1 hour
-    curseforge: 60, // Cache CurseForge data for 1 hour
-    spigot: 120, // Cache for 2 hours (slower updates)
-    bukkit: 120, // Cache for 2 hours
+    github: 60,
+    modrinth: 60,
+    curseforge: 60,
+    spigot: 120,
+    bukkit: 120,
   },
 
   // Default fallback values
