@@ -3,7 +3,7 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: "PluginShowcase",
   description:
-    "Personal portfolio showcasing my plugins and development projects.",
+    "A showcase for Minecraft plugins. Explore a variety of plugins.",
   navItems: [
     {
       label: "Home",
