@@ -1,148 +1,117 @@
-# PluginShowcase
+# 🎮 Plugin Showcase Template
 
-A personal plugin portfolio built with Next.js and HeroUI, showcasing my development projects and plugins.
+A modern, fully configurable Next.js template for showcasing plugins, tools, and projects. Built with TypeScript, Tailwind CSS, and HeroUI components.
 
-## Features
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Next.js](https://img.shields.io/badge/Next.js-14-black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-blue)
 
-- 🏠 **Homepage** - Introduction and featured plugins
-- 🔌 **Plugin Gallery** - Complete list of all plugins with search and filtering
-- 📖 **Plugin Details** - Detailed pages for each plugin with GitHub stats
-- 👤 **About Page** - Personal information and skills
-- 🌙 **Dark/Light Theme** - Toggle between themes
-- 📱 **Responsive Design** - Works on all devices
-- 🚀 **GitHub API Integration** - Live repository statistics
+## ✨ Features
 
-## Tech Stack
+- **Modern Design** - Clean interface with glass effects and dark/light themes
+- **Plugin Management** - Cards with icons, filtering, and detailed pages
+- **Download Statistics** - Real-time tracking from GitHub, Modrinth, CurseForge, etc.
+- **Fully Configurable** - Single config file for complete customization
+- **GitHub Integration** - Automatic README and version fetching
+- **Responsive** - Works perfectly on all devices
 
-- **Framework**: Next.js 15
-- **UI Library**: HeroUI
-- **Styling**: Tailwind CSS
-- **TypeScript**: Full type safety
-- **Theme**: next-themes for dark/light mode
+## 🚀 Quick Start
 
-## Project Structure
-
-```
-app/
-├── page.tsx                 # Homepage
-├── plugins/
-│   ├── page.tsx            # Plugin list page
-│   └── [slug]/
-│       └── page.tsx        # Dynamic plugin detail pages
-├── about/
-│   └── page.tsx            # About page
-└── layout.tsx              # Root layout
-
-components/
-├── featured-plugins.tsx    # Featured plugins component
-├── plugin-list.tsx         # Plugin list with search/filter
-├── plugin-detail.tsx       # Detailed plugin view
-├── github-stats.tsx        # GitHub API integration
-├── feature-list.tsx        # Plugin features display
-└── navbar.tsx              # Navigation component
-
-data/
-└── plugins.json            # Plugin data store
-```
-
-## Components Architecture
-
-### 5+ Required Components ✅
-
-1. **Layout Component** (`app/layout.tsx`)
-
-   - Wraps all pages
-   - Accepts `children` prop
-   - Handles navigation and theme
-
-2. **PluginCard Component** (part of `plugin-list.tsx`)
-
-   - Accepts plugin data as props
-   - Displays plugin summary
-
-3. **PluginDetail Component** (`components/plugin-detail.tsx`)
-
-   - Accepts plugin data as props
-   - Shows comprehensive plugin information
-
-4. **FeatureList Component** (`components/feature-list.tsx`)
-
-   - Nested inside PluginDetail
-   - Displays plugin features as list
-
-5. **GitHubStats Component** (`components/github-stats.tsx`)
-
-   - Fetches GitHub API data
-   - Displays repository statistics
-
-6. **FeaturedPlugins Component** (`components/featured-plugins.tsx`)
-   - Shows featured plugins on homepage
-
-## How to Use
-
-### Use the template with create-next-app
-
-To create a new project based on this template using `create-next-app`, run the following command:
-
-```bash
-npx create-next-app -e https://github.com/heroui-inc/next-app-template
-```
-
-### Install dependencies
-
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
-
-```bash
-npm install
-```
-
-### Run the development server
-
-```bash
-npm run dev
-```
-
-### Setup pnpm (optional)
-
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@heroui/*
-```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
-
-## Setup & Configuration
-
-### Environment Variables
-
-To avoid GitHub API rate limits, you can optionally configure a GitHub Personal Access Token:
-
-1. **Create a GitHub Personal Access Token**:
-
-   - Go to [GitHub Settings > Tokens](https://github.com/settings/tokens)
-   - Click "Generate new token (classic)"
-   - Give it a descriptive name (e.g., "PluginShowcase API")
-   - Select scope: **Only "public_repo" or no scopes needed for public repositories**
-   - Copy the generated token
-
-2. **Configure the token**:
+1. **Clone and install**
 
    ```bash
-   # Copy the example environment file
-   cp .env.local.example .env.local
-
-   # Add your token to .env.local
-   GITHUB_TOKEN=your_github_token_here
+   git clone https://github.com/your-username/plugin-showcase.git
+   cd plugin-showcase
+   npm install
    ```
 
-3. **Rate Limits**:
-   - **Without token**: 60 requests per hour per IP
-   - **With token**: 5,000 requests per hour
-   - The app includes intelligent caching to minimize API calls
+2. **Configure your site** - Edit `config/site.ts`:
 
-> **Note**: The token is optional. The app will work without it but may hit rate limits more frequently.
+   ```typescript
+   export const siteConfig = {
+     name: "Your Project Showcase",
+     brand: {
+       name: "Your Brand",
+       tagline: "Your tagline here",
+       logo: "/your-logo.svg",
+     },
+     // ... customize everything
+   };
+   ```
 
-## License
+3. **Add your plugins** - Edit `data/plugins.json`:
 
-Licensed under the [MIT license](https://github.com/heroui-inc/next-app-template/blob/main/LICENSE).
+   ```json
+   [
+     {
+       "slug": "your-plugin",
+       "name": "Your Plugin",
+       "shortDescription": "Brief description",
+       "githubRepo": "username/repository",
+       "icon": "/images/your-plugin-icon.png",
+       "tags": ["tag1", "tag2"],
+       "downloadSources": [{ "type": "github", "id": "username/repository" }],
+       "featured": true
+     }
+   ]
+   ```
+
+4. **Start developing**
+   ```bash
+   npm run dev
+   ```
+
+## 🔧 Configuration
+
+### Main Config (`config/site.ts`)
+
+- **Brand settings** - Name, logo, tagline
+- **Homepage content** - Hero section, specialties, featured projects
+- **Navigation** - Menu items and links
+- **Error pages** - Custom 404 and error messages
+- **SEO** - Meta tags and descriptions
+
+### Plugin Data (`data/plugins.json`)
+
+- **Basic info** - Name, description, GitHub repo
+- **Icons** - PNG/SVG files in `/public/images/`
+- **Tags** - For filtering and categorization
+- **Download sources** - GitHub, Modrinth, CurseForge, etc.
+- **Featured flag** - Show on homepage
+
+### Environment Variables (Optional)
+
+```bash
+# .env.local
+GITHUB_TOKEN=your_token_here  # For higher API rate limits
+```
+
+## 📊 Supported Platforms
+
+- **GitHub** - Automatic release tracking and stats
+- **Modrinth** - Minecraft mod platform
+- **CurseForge** - Popular mod repository
+- **SpigotMC** - Minecraft plugin platform
+- **Bukkit** - Classic plugin platform
+
+## 🌍 Deployment
+
+### Vercel (Recommended)
+
+1. Push code to GitHub
+2. Import project in Vercel
+3. Add environment variables if needed
+4. Deploy!
+
+### Other Options
+
+Works with Netlify, Railway, Heroku, or any Next.js hosting platform.
+
+## 🛠️ Development
+
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run lint         # Run ESLint
+```
