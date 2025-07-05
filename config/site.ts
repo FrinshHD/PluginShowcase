@@ -94,11 +94,6 @@ export const siteConfig = {
           href: "/",
           variant: "primary",
         },
-        {
-          text: "Browse Plugins",
-          href: "/plugins",
-          variant: "bordered",
-        },
       ],
     },
     error: {
@@ -112,11 +107,6 @@ export const siteConfig = {
           text: "Try Again",
           action: "retry",
           variant: "primary",
-        },
-        {
-          text: "Go Home",
-          href: "/",
-          variant: "bordered",
         },
       ],
     },
