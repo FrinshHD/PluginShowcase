@@ -19,7 +19,7 @@ import { usePathname } from "next/navigation";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import { GithubIcon, Logo } from "@/components/icons";
+import { Logo } from "@/components/icons";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -86,15 +86,6 @@ export const Navbar = () => {
 
       <NavbarContent justify="end">
         <NavbarItem className="hidden sm:flex gap-2">
-          <Link
-            as={NextLink}
-            href={siteConfig.links.github}
-            isExternal
-            className="p-2 rounded-full bg-white/10 dark:bg-white/5 hover:bg-white/20 dark:hover:bg-white/10 transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-white/10 dark:border-white/5"
-            aria-label="GitHub"
-          >
-            <GithubIcon className="w-5 h-5" />
-          </Link>
           <div className="p-1 rounded-full bg-white/10 dark:bg-white/5 hover:bg-white/20 dark:hover:bg-white/10 transition-all duration-300 backdrop-blur-sm border border-white/10 dark:border-white/5">
             <ThemeSwitch />
           </div>
@@ -140,15 +131,6 @@ export const Navbar = () => {
           ))}
 
           <div className="flex items-center gap-4 pt-4 border-t border-white/20 dark:border-white/10">
-            <Link
-              as={NextLink}
-              href={siteConfig.links.github}
-              isExternal
-              className="flex items-center gap-2 p-2 rounded-lg bg-white/10 dark:bg-white/5 hover:bg-white/20 dark:hover:bg-white/10 transition-all duration-300 backdrop-blur-sm border border-white/10 dark:border-white/5 hover:scale-105"
-            >
-              <GithubIcon className="w-5 h-5" />
-              <span className="text-sm">GitHub</span>
-            </Link>
             <div className="p-1 rounded-lg bg-white/10 dark:bg-white/5 hover:bg-white/20 dark:hover:bg-white/10 transition-all duration-300 backdrop-blur-sm border border-white/10 dark:border-white/5">
               <ThemeSwitch />
             </div>
