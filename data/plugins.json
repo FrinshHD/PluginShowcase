@@ -1,0 +1,107 @@
+[
+  {
+    "slug": "logictags",
+    "name": "LogicTags",
+    "shortDescription": "Add customizable tags above each player",
+    "author": "FrinshHD",
+    "githubRepo": "frinshhd/logictags",
+    "tags": ["Paper", "Purpur"],
+    "documentationUrl": "https://codearray.dev/docs/logictags",
+    "downloadSources": [
+      {
+        "type": "modrinth",
+        "id": "logictags"
+      },
+      {
+        "type": "github",
+        "id": "frinshhd/logictags"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "slug": "logiclobby",
+    "name": "LogicLobby",
+    "shortDescription": "A very customizable lobby plugin with CloudNet v4 support",
+    "author": "FrinshHD",
+    "githubRepo": "frinshhd/logiclobby",
+    "tags": ["Paper", "Purpur"],
+    "documentationUrl": "https://codearray.dev/docs/logiclobby",
+    "downloadSources": [
+      {
+        "type": "modrinth",
+        "id": "logiclobby"
+      },
+      {
+        "type": "spigot",
+        "id": "logictags.125419"
+      },
+      {
+        "type": "github",
+        "id": "frinshhd/logiclobby"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "slug": "anturniaquests",
+    "name": "AnturniaQuests",
+    "shortDescription": "A very nice addition to make the gameplay more interesting by completing quests and earning rewards",
+    "author": "FrinshHD",
+    "githubRepo": "frinshhd/anturniaquests",
+    "tags": ["Spigot", "Paper", "Purpur"],
+    "documentationUrl": "https://codearray.dev/docs/anturniaquests",
+    "downloadSources": [
+      {
+        "type": "modrinth",
+        "id": "anturniaquests"
+      },
+      {
+        "type": "spigot",
+        "id": "113784"
+      },
+      {
+        "type": "github",
+        "id": "frinshhd/anturniaquests"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "slug": "logicsimplecommands",
+    "name": "LogicSimpleCommands",
+    "shortDescription": "A Minecraft-Plugin which allows you to add commands and put them optionally in a gui.",
+    "author": "FrinshHD",
+    "githubRepo": "frinshhd/logicsimplecommands",
+    "tags": ["Paper", "Purpur"],
+    "documentationUrl": "https://codearray.dev/docs/logicsimplecommands",
+    "downloadSources": [
+      {
+        "type": "modrinth",
+        "id": "logicsimplecommands"
+      },
+      {
+        "type": "spigot",
+        "id": "logicsimplecommands.119567"
+      },
+      {
+        "type": "github",
+        "id": "frinshhd/logicsimplecommands"
+      }
+    ]
+  },
+  {
+    "slug": "logicextraplotsquaredplaceholders",
+    "name": "LogicExtraPlotSquaredPlaceholders",
+    "shortDescription": "Adding extra placeholders with PlaceholderAPI for PlotSquared",
+    "author": "FrinshHD",
+    "githubRepo": "frinshhd/logicextraplotsquaredplaceholders",
+    "tags": ["Paper", "Purpur"],
+    "downloadSources": [
+      {
+        "type": "github",
+        "id": "frinshhd/logicextraplotsquaredplaceholders"
+      }
+    ]
+  }
+]

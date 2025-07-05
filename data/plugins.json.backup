@@ -1,0 +1,185 @@
+[
+  {
+    "slug": "minecraft-economy-plus",
+    "name": "Economy Plus",
+    "shortDescription": "Advanced economy system for Minecraft servers",
+    "description": "A comprehensive economy plugin that provides a robust monetary system with banks, shops, auctions, and more. Features include multi-currency support, player-to-player transactions, and extensive configuration options.",
+    "author": "EssentialsX Team",
+    "features": [
+      "Multi-currency support",
+      "Player-to-player transactions",
+      "Bank system with interest rates",
+      "Auction house integration",
+      "Shop creation and management",
+      "Economy statistics and analytics",
+      "MySQL and SQLite support",
+      "Extensive API for developers"
+    ],
+    "githubRepo": "EssentialsX/Essentials",
+    "screenshots": [
+      "/images/economy-shop.png",
+      "/images/economy-bank.png",
+      "/images/economy-auction.png"
+    ],
+    "tags": ["Minecraft", "Economy", "MySQL", "API"],
+    "downloadSources": [
+      {
+        "type": "github",
+        "id": "EssentialsX/Essentials"
+      },
+      {
+        "type": "spigot",
+        "id": "9089"
+      },
+      {
+        "type": "modrinth",
+        "id": "essentialsx"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "slug": "discord-moderation-bot",
+    "name": "ModGuard Bot",
+    "shortDescription": "Advanced Discord moderation bot with AI features",
+    "description": "An intelligent Discord moderation bot that uses machine learning to detect spam, inappropriate content, and toxic behavior. Includes auto-moderation, custom filters, and detailed logging.",
+    "features": [
+      "AI-powered content detection",
+      "Auto-moderation with customizable rules",
+      "Spam and raid protection",
+      "Custom word filters",
+      "Detailed moderation logs",
+      "User warning system",
+      "Temporary and permanent bans",
+      "Integration with external APIs"
+    ],
+    "githubRepo": "DiscordSRV/DiscordSRV",
+    "screenshots": [
+      "/images/modguard-dashboard.png",
+      "/images/modguard-logs.png",
+      "/images/modguard-settings.png"
+    ],
+    "tags": ["Discord", "Moderation", "AI", "Bot"],
+    "downloadSources": [
+      {
+        "type": "github",
+        "id": "yourname/discord-modguard-bot"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "slug": "web-scraper-tool",
+    "name": "DataHarvest",
+    "shortDescription": "Powerful web scraping tool with proxy support",
+    "description": "A comprehensive web scraping solution that handles JavaScript-heavy sites, provides proxy rotation, and includes data export features. Built for both beginners and advanced users.",
+    "features": [
+      "JavaScript rendering support",
+      "Proxy rotation and management",
+      "Multiple export formats (JSON, CSV, XML)",
+      "Rate limiting and ethical scraping",
+      "Custom CSS and XPath selectors",
+      "Scheduled scraping jobs",
+      "Data visualization dashboard",
+      "RESTful API interface"
+    ],
+    "githubRepo": "scrapy/scrapy",
+    "screenshots": [
+      "/images/scraper-dashboard.png",
+      "/images/scraper-config.png",
+      "/images/scraper-results.png"
+    ],
+    "tags": ["Web Scraping", "Python", "Automation", "Data"],
+    "downloadSources": [
+      {
+        "type": "github",
+        "id": "yourname/dataharvest-scraper"
+      }
+    ],
+    "featured": false
+  },
+  {
+    "slug": "react-component-library",
+    "name": "FlexUI Components",
+    "shortDescription": "Modern React component library with TypeScript",
+    "description": "A collection of reusable React components built with TypeScript, Tailwind CSS, and modern design principles. Includes comprehensive documentation and Storybook integration.",
+    "features": [
+      "50+ customizable components",
+      "Full TypeScript support",
+      "Tailwind CSS integration",
+      "Dark mode support",
+      "Accessibility compliant (WCAG 2.1)",
+      "Storybook documentation",
+      "Tree-shaking optimization",
+      "NPM package ready"
+    ],
+    "githubRepo": "vercel/next.js",
+    "screenshots": [
+      "/images/flexui-showcase.png",
+      "/images/flexui-storybook.png",
+      "/images/flexui-components.png"
+    ],
+    "tags": ["React", "TypeScript", "Components", "UI"],
+    "downloadSources": [
+      {
+        "type": "github",
+        "id": "yourname/flexui-components"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "slug": "logictags",
+    "name": "LogicTags",
+    "shortDescription": "Modern React component library with TypeScript",
+    "features": [
+      "50+ customizable components",
+      "Full TypeScript support",
+      "Tailwind CSS integration",
+      "Dark mode support",
+      "Accessibility compliant (WCAG 2.1)",
+      "Storybook documentation",
+      "Tree-shaking optimization",
+      "NPM package ready"
+    ],
+    "githubRepo": "frinshhd/logictags",
+    "screenshots": [
+      "/images/flexui-showcase.png",
+      "/images/flexui-storybook.png",
+      "/images/flexui-components.png"
+    ],
+    "tags": ["Paper", "Purpur"],
+    "downloadSources": [
+      {
+        "type": "modrinth",
+        "id": "logictags"
+      },
+      {
+        "type": "github",
+        "id": "frinshhd/logictags"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "slug": "test-plugin-readme",
+    "name": "Test Plugin README",
+    "shortDescription": "Plugin that loads description from GitHub README",
+    "description": "This plugin demonstrates inline code like `tags.yml` and `config.properties` files. You can also see code blocks:\n\n```yaml\ntags:\n  - test\n  - inline\n```\n\nAnd more inline code like `npm install` commands.",
+    "features": [
+      "Loads description from GitHub README",
+      "Demonstrates markdown rendering",
+      "Shows fallback when no README available"
+    ],
+    "githubRepo": "EssentialsX/Essentials",
+    "screenshots": [],
+    "tags": ["Test", "Markdown", "README"],
+    "downloadSources": [
+      {
+        "type": "github",
+        "id": "EssentialsX/Essentials"
+      }
+    ],
+    "featured": false
+  }
+]

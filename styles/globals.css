@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Markdown content styling */
+.markdown-content {
+  line-height: 1.6;
+}
+
+/* Fix for GitHub badge alignment */
+.markdown-content img[src*="img.shields.io"] {
+  display: inline-block;
+  margin: 0 2px;
+  vertical-align: middle;
+}
+
+/* Better spacing for consecutive paragraphs */
+.markdown-content p + p {
+  margin-top: 1rem;
+}
+
+/* Better list styling */
+.markdown-content ul ul,
+.markdown-content ol ul,
+.markdown-content ul ol,
+.markdown-content ol ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Code block improvements */
+.markdown-content pre {
+  position: relative;
+  overflow-x: auto;
+}
+
+.markdown-content pre code {
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+/* Table improvements */
+.markdown-content table {
+  border-spacing: 0;
+}
+
+.markdown-content table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Link styling improvements */
+.markdown-content a {
+  word-break: break-word;
+}
+
+/* Blockquote improvements */
+.markdown-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Image alignment for logos and badges */
+.markdown-content p img:only-child {
+  display: block;
+  margin: 1rem auto;
+}
+
+/* Handle multiple badges/images in a line */
+.markdown-content p:has(> img[height]) {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.markdown-content p:has(> img[height]) img {
+  margin: 0;
+}
+
+/* Fix heading spacing after images */
+.markdown-content img + h1,
+.markdown-content img + h2,
+.markdown-content img + h3 {
+  margin-top: 2rem;
+}
+
+/* Handle GitHub logo/title images */
+.markdown-content p:first-child img:only-child {
+  display: block;
+  margin: 0 auto 2rem auto;
+  max-height: 200px;
+}
+
+/* Better spacing for GitHub-style content */
+.markdown-content > *:first-child {
+  margin-top: 0;
+}
+
+.markdown-content > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Handle nested lists better */
+.markdown-content li > ul,
+.markdown-content li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Code span in lists */
+.markdown-content li code {
+  font-size: 0.875rem;
+  border: none;
+}
+
+/* Ensure inline code stays inline */
+.markdown-content p code:not([class*="language-"]) {
+  display: inline !important;
+  white-space: nowrap !important;
+  background: hsl(var(--nextui-default-100)) !important;
+  color: hsl(var(--nextui-default-800)) !important;
+  padding: 0.125rem 0.375rem !important;
+  border-radius: 0.25rem !important;
+  font-size: 0.875rem !important;
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    "SF Mono",
+    Cascadia,
+    "Cascadia Code",
+    Roboto Mono,
+    Consolas,
+    "Liberation Mono",
+    Menlo,
+    monospace !important;
+  border: 1px solid hsl(var(--nextui-default-200)) !important;
+}
+
+/* Block code should be block */
+.markdown-content pre code {
+  display: block !important;
+  white-space: pre !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
