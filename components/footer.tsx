@@ -81,7 +81,7 @@ const Footer = () => {
             {/* Community & Support */}
             <div>
               <p className="text-sm text-default-500 mt-6">
-                Made with ❤️ for Minecraft
+                Made with ❤️ by FrinshHD
               </p>
             </div>
           </div>
