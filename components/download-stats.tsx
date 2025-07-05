@@ -6,6 +6,13 @@ import { Skeleton } from "@heroui/skeleton";
 import { Progress } from "@heroui/progress";
 import { useDownloadCounts } from "@/hooks/use-download-counts";
 import { DownloadSource } from "@/types";
+import {
+  Github01Icon,
+  PackageIcon,
+  Database02Icon,
+  CloudDownloadIcon,
+  Download01Icon,
+} from "hugeicons-react";
 
 interface DownloadStatsProps {
   sources: DownloadSource[];
@@ -24,26 +31,28 @@ export function DownloadStats({
   } = useDownloadCounts(sources);
 
   const getSourceIcon = (sourceType: string) => {
+    const iconProps = { size: 16, className: "flex-shrink-0" };
+
     switch (sourceType) {
       case "github":
-        return "🐙";
+        return <Github01Icon {...iconProps} />;
       case "modrinth":
-        return "📦";
+        return <PackageIcon {...iconProps} />;
       case "curseforge":
-        return "🔥";
+        return <Database02Icon {...iconProps} />;
       case "spigot":
-        return "🟡";
+        return <CloudDownloadIcon {...iconProps} />;
       case "bukkit":
-        return "🟠";
+        return <Download01Icon {...iconProps} />;
       default:
-        return "📊";
+        return <Download01Icon {...iconProps} />;
     }
   };
 
   const getSourceColor = (sourceType: string) => {
     switch (sourceType) {
       case "github":
-        return "default" as const;
+        return "secondary" as const; // GitHub purple
       case "modrinth":
         return "success" as const;
       case "curseforge":
@@ -51,7 +60,7 @@ export function DownloadStats({
       case "spigot":
         return "warning" as const;
       case "bukkit":
-        return "secondary" as const;
+        return "default" as const;
       default:
         return "primary" as const;
     }
@@ -107,7 +116,7 @@ export function DownloadStats({
                 <div key={index} className="space-y-2">
                   <div className="flex justify-between items-center">
                     <div className="flex items-center gap-2">
-                      <span>{getSourceIcon(source.source)}</span>
+                      {getSourceIcon(source.source)}
                       <span className="text-sm capitalize">
                         {source.source}
                       </span>

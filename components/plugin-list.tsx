@@ -1,14 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
 import { Chip } from "@heroui/chip";
-import { Button } from "@heroui/button";
-import { Link } from "@heroui/link";
 import { Input } from "@heroui/input";
 import pluginsData from "@/data/plugins.json";
 import { Plugin } from "@/types";
-import { CompactDownloadCounter } from "@/components/compact-download-counter";
+import { PluginCard } from "@/components/plugin-card";
 
 export function PluginList() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -63,42 +60,12 @@ export function PluginList() {
       {/* Plugin Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredPlugins.map((plugin) => (
-          <Card key={plugin.slug} className="max-w-[400px]">
-            <CardHeader className="flex gap-3">
-              <div className="flex flex-col flex-1">
-                <div className="flex justify-between items-start">
-                  <p className="text-md font-semibold">{plugin.name}</p>
-                  {plugin.featured && (
-                    <Chip color="warning" variant="flat" size="sm">
-                      Featured
-                    </Chip>
-                  )}
-                </div>
-                <div className="flex justify-between items-center mt-1">
-                  <CompactDownloadCounter sources={plugin.downloadSources} />
-                </div>
-              </div>
-            </CardHeader>
-            <CardBody>
-              <p className="text-small text-default-600 mb-4">
-                {plugin.shortDescription}
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                {plugin.tags.map((tag) => (
-                  <Chip key={tag} color="primary" variant="flat" size="sm">
-                    {tag}
-                  </Chip>
-                ))}
-              </div>
-            </CardBody>
-            <CardFooter>
-              <Link href={`/plugins/${plugin.slug}`} className="w-full">
-                <Button color="primary" variant="flat" className="w-full">
-                  View Details
-                </Button>
-              </Link>
-            </CardFooter>
-          </Card>
+          <PluginCard
+            key={plugin.slug}
+            plugin={plugin}
+            showFeaturedBadge={true}
+            buttonText="View Details"
+          />
         ))}
       </div>
 

@@ -5,6 +5,7 @@
     "shortDescription": "Add customizable tags above each player",
     "author": "FrinshHD",
     "githubRepo": "frinshhd/logictags",
+    "icon": "/images/plugins/logictags-logo.png",
     "tags": ["Paper", "Purpur"],
     "documentationUrl": "https://codearray.dev/docs/logictags",
     "downloadSources": [
@@ -25,6 +26,7 @@
     "shortDescription": "A very customizable lobby plugin with CloudNet v4 support",
     "author": "FrinshHD",
     "githubRepo": "frinshhd/logiclobby",
+    "icon": "/images/plugins/logiclobby-logo.png",
     "tags": ["Paper", "Purpur"],
     "documentationUrl": "https://codearray.dev/docs/logiclobby",
     "downloadSources": [
@@ -51,6 +53,7 @@
     "githubRepo": "frinshhd/anturniaquests",
     "tags": ["Spigot", "Paper", "Purpur"],
     "documentationUrl": "https://codearray.dev/docs/anturniaquests",
+    "icon": "/images/plugins/anturniaquests-logo.png",
     "downloadSources": [
       {
         "type": "modrinth",
@@ -75,6 +78,7 @@
     "githubRepo": "frinshhd/logicsimplecommands",
     "tags": ["Paper", "Purpur"],
     "documentationUrl": "https://codearray.dev/docs/logicsimplecommands",
+    "icon": "/images/plugins/logicsimplecommands-logo.png",
     "downloadSources": [
       {
         "type": "modrinth",

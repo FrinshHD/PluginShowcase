@@ -28,6 +28,7 @@ export interface Plugin {
   version?: string;
   lastUpdated?: string;
   documentationUrl?: string;
+  icon?: string;
   tags: string[];
   downloadSources: DownloadSource[];
   featured: boolean;
