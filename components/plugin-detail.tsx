@@ -4,6 +4,7 @@ import { Card, CardBody, CardHeader } from "@heroui/card";
 import { Chip } from "@heroui/chip";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
+import { Image } from "@heroui/image";
 import { Divider } from "@heroui/divider";
 import { ProjectInfo } from "@/components/project-info";
 import { FeatureList } from "@/components/feature-list";
@@ -16,6 +17,7 @@ import { useGitHubVersion } from "@/hooks/use-github-version";
 import { useGitHubReadme } from "@/hooks/use-github-readme";
 import { Plugin } from "@/types";
 import { Book02Icon, Github01Icon } from "hugeicons-react";
+import { siteConfig } from "@/config/site";
 
 interface PluginDetailProps {
   plugin: Plugin;
@@ -40,7 +42,19 @@ export function PluginDetail({ plugin }: PluginDetailProps) {
   return (
     <div className="max-w-6xl mx-auto py-8 px-4">
       <div className="text-center mb-8">
-        <h1 className={title()}>{plugin.name}</h1>
+        <div className="flex items-center justify-center gap-4 mb-4">
+          {siteConfig.homepage.pluginDisplay.showIcons && plugin.icon && (
+            <Image
+              alt={`${plugin.name} icon`}
+              height={60}
+              radius="lg"
+              src={plugin.icon}
+              width={60}
+              className="shadow-lg flex-shrink-0"
+            />
+          )}
+          <h1 className={title()}>{plugin.name}</h1>
+        </div>
         <p className="text-lg text-default-500 mt-4 max-w-2xl mx-auto">
           {plugin.description}
         </p>
