@@ -14,6 +14,10 @@
         "id": "logictags"
       },
       {
+        "type": "spigot",
+        "id": "125419"
+      },
+      {
         "type": "github",
         "id": "frinshhd/logictags"
       }
