@@ -7,6 +7,7 @@ import { Link } from "@heroui/link";
 
 import { title, subtitle } from "@/components/primitives";
 import { siteConfig } from "@/config/site";
+import { ButtonConfig } from "@/types";
 
 export default function Error({
   error,
@@ -40,22 +41,46 @@ export default function Error({
               {errorConfig.message}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              {errorConfig.buttons.map((button, index) => (
-                <Button
-                  key={index}
-                  className="font-semibold"
-                  color={button.variant === "primary" ? "primary" : undefined}
-                  size="lg"
-                  variant={
-                    button.variant === "bordered" ? "bordered" : undefined
+              {errorConfig.buttons.map(
+                (button: ButtonConfig, index: number) => {
+                  if (button.href) {
+                    return (
+                      <Button
+                        key={index}
+                        as={Link}
+                        href={button.href}
+                        className="font-semibold"
+                        color={
+                          button.variant === "primary" ? "primary" : undefined
+                        }
+                        size="lg"
+                        variant={
+                          button.variant === "bordered" ? "bordered" : undefined
+                        }
+                      >
+                        {button.text}
+                      </Button>
+                    );
                   }
-                  onClick={button.action === "retry" ? reset : undefined}
-                  href={button.href}
-                  as={button.href ? Link : undefined}
-                >
-                  {button.text}
-                </Button>
-              ))}
+
+                  return (
+                    <Button
+                      key={index}
+                      className="font-semibold"
+                      color={
+                        button.variant === "primary" ? "primary" : undefined
+                      }
+                      size="lg"
+                      variant={
+                        button.variant === "bordered" ? "bordered" : undefined
+                      }
+                      onClick={button.action === "retry" ? reset : undefined}
+                    >
+                      {button.text}
+                    </Button>
+                  );
+                }
+              )}
             </div>
           </CardBody>
         </Card>

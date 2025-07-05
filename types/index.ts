@@ -4,6 +4,19 @@ export type IconSvgProps = SVGProps<SVGSVGElement> & {
   size?: number;
 };
 
+export type ButtonConfig = {
+  text: string;
+  variant?: string;
+} & ({ href: string; action?: never } | { action: string; href?: never });
+
+export type PageConfig = {
+  icon?: string;
+  title: string;
+  subtitle?: string;
+  message: string;
+  buttons: ButtonConfig[];
+};
+
 export type SiteConfig = {
   name: string;
   description: string;
