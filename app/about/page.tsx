@@ -27,15 +27,6 @@ export default function AboutPage() {
               >
                 Browse Plugins
               </Button>
-              <Button
-                className="font-semibold"
-                href="/docs"
-                size="lg"
-                variant="bordered"
-                as={Link}
-              >
-                View Documentation
-              </Button>
             </div>
           </CardBody>
         </Card>
