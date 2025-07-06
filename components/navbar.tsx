@@ -56,7 +56,7 @@ export const Navbar = () => {
         height="4.5rem"
         classNames={{
           wrapper:
-            "px-6 bg-background/70 backdrop-blur-2xl rounded-2xl border border-white/10 dark:border-white/5 shadow-2xl shadow-black/10 dark:shadow-black/30",
+            "px-6 bg-background/5 backdrop-blur-xl rounded-2xl border border-white/5 dark:border-white/5 shadow-xl shadow-black/5 dark:shadow-black/20",
           base: "rounded-2xl",
           brand: "gap-3",
           content: "gap-6",
@@ -112,7 +112,7 @@ export const Navbar = () => {
           </NavbarItem>
         </NavbarContent>
 
-        <NavbarMenu className="pt-6 bg-background/80 backdrop-blur-2xl border-r border-white/10 dark:border-white/5 shadow-2xl">
+        <NavbarMenu className="pt-6 bg-background/60 backdrop-blur-xl border-r border-white/5 dark:border-white/5 shadow-xl">
           <div className="flex flex-col gap-4">
             {siteConfig.navItems.map((item, index) => (
               <NavbarMenuItem key={`${item}-${index}`}>
