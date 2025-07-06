@@ -13,10 +13,13 @@ import { BackToTop } from "@/components/back-to-top";
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
+    default: siteConfig.seo.defaultTitle,
+    template: siteConfig.seo.titleTemplate,
   },
-  description: siteConfig.description,
+  description: siteConfig.seo.defaultDescription,
+  keywords: siteConfig.seo.keywords,
+  authors: [{ name: siteConfig.seo.author }],
+  creator: siteConfig.seo.author,
   icons: {
     icon: "/favicon.ico",
   },

@@ -1,21 +1,21 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "PluginShowcase",
+  name: "Plugin Showcase",
   description:
-    "A showcase for Minecraft plugins. Explore a variety of plugins.",
+    "A showcase for your plugins and tools. Explore a variety of plugins and applications.",
 
   brand: {
-    name: "Codearray.dev",
-    tagline: "A small development team creating open-source projects",
-    logo: "/next.svg",
+    name: "Plugin Showcase",
+    tagline: "Building amazing plugins for the community",
+    logo: "/logo.svg",
   },
 
   homepage: {
     hero: {
-      title: "Codearray.dev",
+      title: "Plugin Showcase",
       subtitle:
-        "A small development team creating open-source projects. We specialize in Minecraft-Plugins, Discord-Bots and Webapps.",
+        "A place where you can showcase your plugins, tools and projects.",
       primaryButton: {
         text: "View All Plugins",
         href: "/plugins",
@@ -26,8 +26,8 @@ export const siteConfig = {
       },
     },
     featuredSection: {
-      title: "Featured Projects",
-      subtitle: "Check out some of our most popular and innovative plugins",
+      title: "Featured Plugins",
+      subtitle: "Check out some of my most popular and innovative plugins",
     },
     pluginDisplay: {
       showIcons: true,
@@ -35,24 +35,24 @@ export const siteConfig = {
     specialties: [
       {
         icon: "🎮",
-        title: "Minecraft Plugins",
-        category: "Spigot & Paper",
+        title: "Server Plugins",
+        category: "Game Servers",
         description:
-          "Lightweight and efficient plugins for Minecraft servers. Focus on performance and clean code.",
+          "Creating powerful plugins for game servers. Focus on performance, stability, and user experience.",
       },
       {
         icon: "⚡",
-        title: "Server Tools",
-        category: "Utility & Management",
+        title: "Utility Plugins",
+        category: "Tools & Management",
         description:
-          "Simple tools that make server administration easier. Built for reliability and ease of use.",
+          "Building plugins that make server management easier. Designed for efficiency and reliability.",
       },
       {
         icon: "🔧",
         title: "Open Source",
         category: "Community Driven",
         description:
-          "All our plugins are open source on GitHub. Contributions and feedback are always welcome.",
+          "All our plugins are open source. Contributions and feedback are always welcome.",
       },
     ],
   },
@@ -125,64 +125,45 @@ export const siteConfig = {
 
   links: {
     github: "https://github.com/frinshhd",
-    discord: "https://codearray.dev/discord",
+    discord: "https://discord.gg/KZ2FtDKQPk",
   },
 
   footer: {
     sections: [
       {
-        title: "Quick Links",
+        title: "Legal",
         links: [
-          { text: "Home", href: "/" },
-          { text: "Plugins", href: "/plugins" },
-          { text: "About", href: "/about" },
-        ],
-      },
-      {
-        title: "Community",
-        links: [
-          {
-            text: "GitHub",
-            href: "https://github.com/frinshhd",
-            external: true,
-          },
-          {
-            text: "Discord",
-            href: "https://codearray.dev/discord",
-            external: true,
-          },
+          { text: "Legal Notice", href: "/legalnotice" },
+          { text: "Privacy Policy", href: "/privacypolicy" },
         ],
       },
     ],
-    copyright: "© 2025 Codearray.dev. All rights reserved.",
+    copyright: "© 2025 Plugin Showcase. All rights reserved.",
+    disclaimer:
+      "Not affiliated with Mojang Studios. Minecraft is a trademark of Mojang Studios.",
   },
 
   seo: {
-    defaultTitle: "PluginShowcase - Minecraft Plugins by Codearray.dev",
-    titleTemplate: "%s | PluginShowcase",
+    defaultTitle: "Plugin Showcase - Your Plugins",
+    titleTemplate: "%s | Plugin Showcase",
     defaultDescription:
-      "A showcase for Minecraft plugins. Explore a variety of plugins created by Codearray.dev team.",
+      "A showcase for your plugins and tools. Explore a variety of server plugins and utilities.",
     keywords: [
-      "minecraft",
       "plugins",
-      "spigot",
-      "paper",
-      "bukkit",
-      "server",
+      "showcase",
+      "server plugins",
+      "minecraft plugins",
+      "game server",
+      "utilities",
+      "development",
       "tools",
     ],
-    author: "Codearray.dev",
-    twitterHandle: "@codearray",
+    author: "Plugin Showcase",
   },
 
   theme: {
     colors: {
       primary: "violet",
-      secondary: "blue",
-    },
-    fonts: {
-      heading: "Inter",
-      body: "Inter",
     },
   },
 };
