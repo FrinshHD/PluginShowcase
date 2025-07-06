@@ -91,6 +91,7 @@ export function PluginDetail({ plugin }: PluginDetailProps) {
             versionOverride={plugin.version}
             lastUpdatedOverride={plugin.lastUpdated}
             tags={plugin.tags}
+            bStatsId={plugin.bStatsId}
           />
 
           {/* Quick Actions */}

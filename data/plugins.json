@@ -8,6 +8,7 @@
     "icon": "/images/plugins/logictags-logo.png",
     "tags": ["Paper", "Purpur"],
     "documentationUrl": "https://codearray.dev/docs/logictags",
+    "bStatsId": "25996",
     "downloadSources": [
       {
         "type": "modrinth",
@@ -33,6 +34,7 @@
     "icon": "/images/plugins/logiclobby-logo.png",
     "tags": ["Paper", "Purpur"],
     "documentationUrl": "https://codearray.dev/docs/logiclobby",
+    "bStatsId": "20990",
     "downloadSources": [
       {
         "type": "modrinth",
@@ -58,6 +60,7 @@
     "tags": ["Spigot", "Paper", "Purpur"],
     "documentationUrl": "https://codearray.dev/docs/anturniaquests",
     "icon": "/images/plugins/anturniaquests-logo.png",
+    "bStatsId": "20180",
     "downloadSources": [
       {
         "type": "modrinth",
@@ -83,6 +86,7 @@
     "tags": ["Paper", "Purpur"],
     "documentationUrl": "https://codearray.dev/docs/logicsimplecommands",
     "icon": "/images/plugins/logicsimplecommands-logo.png",
+    "bStatsId": "23351",
     "downloadSources": [
       {
         "type": "modrinth",

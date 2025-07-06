@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import { Chip } from "@heroui/chip";
 import { Skeleton } from "@heroui/skeleton";
-import { TagsIcon, Calendar03Icon } from "hugeicons-react";
+import { TagsIcon, Calendar03Icon, ComputerIcon } from "hugeicons-react";
+import { useBStats } from "@/hooks/use-bstats";
 
 interface GitHubData {
   updated_at: string;
@@ -22,6 +23,7 @@ interface ProjectInfoProps {
   versionOverride?: string; // Optional version override
   lastUpdatedOverride?: string; // Optional last updated override (ISO date string)
   tags?: string[]; // Optional tags to display
+  bStatsId?: string; // Optional bStats plugin ID for server count
 }
 
 export function ProjectInfo({
@@ -30,11 +32,15 @@ export function ProjectInfo({
   versionOverride,
   lastUpdatedOverride,
   tags,
+  bStatsId,
 }: ProjectInfoProps) {
   const [data, setData] = useState<GitHubData | null>(null);
   const [release, setRelease] = useState<GitHubRelease | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  // Fetch bStats data if bStatsId is provided
+  const bStatsData = useBStats(bStatsId);
 
   useEffect(() => {
     const fetchGitHubData = async () => {
@@ -158,6 +164,27 @@ export function ProjectInfo({
             <Chip color="primary" variant="flat" size="sm">
               {data.language}
             </Chip>
+          </div>
+        )}
+
+        {/* Server Count from bStats */}
+        {bStatsId && (
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-default-500">Servers Using</span>
+            {bStatsData.loading ? (
+              <Skeleton className="h-6 w-16 rounded-full" />
+            ) : bStatsData.error ? (
+              <Chip color="default" variant="flat" size="sm">
+                N/A
+              </Chip>
+            ) : (
+              <Chip color="secondary" variant="flat" size="sm">
+                <div className="flex items-center gap-1">
+                  <ComputerIcon size={14} />
+                  {bStatsData.serverCount.toLocaleString()}
+                </div>
+              </Chip>
+            )}
           </div>
         )}
 

@@ -13,6 +13,7 @@ class APICache {
     GITHUB_RELEASES: 15 * 60 * 1000,
     MODRINTH: 10 * 60 * 1000,
     SPIGOT: 15 * 60 * 1000,
+    BSTATS: 30 * 60 * 1000, // 30 minutes - bStats data updates less frequently
     RATE_LIMITED: 2 * 60 * 1000,
     DEFAULT: 5 * 60 * 1000,
   } as const;

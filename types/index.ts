@@ -45,4 +45,5 @@ export interface Plugin {
   tags: string[];
   downloadSources: DownloadSource[];
   featured: boolean;
+  bStatsId?: string; // Optional bStats plugin ID for server usage tracking
 }
