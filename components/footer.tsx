@@ -69,8 +69,9 @@ const Footer = () => {
                                 : NextLink
                             }
                             href={link.href}
-                            {...("external" in link &&
-                              link.external && { isExternal: true })}
+                            {...("external" in link && link.external
+                              ? { isExternal: true }
+                              : {})}
                             color="foreground"
                             className="text-sm text-default-500 hover:text-foreground transition-colors"
                           >
