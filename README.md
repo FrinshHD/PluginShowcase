@@ -1,5 +1,7 @@
 # 🎮 Plugin Showcase Template
 
+![image](https://github.com/user-attachments/assets/c321531c-44fd-4b22-9fc3-d0b95ebc290f)
+
 A modern, fully configurable Next.js template for showcasing plugins, tools, and projects. Built with TypeScript, Tailwind CSS, and HeroUI components.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
