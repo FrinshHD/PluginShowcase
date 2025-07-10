@@ -47,3 +47,9 @@ export interface Plugin {
   featured: boolean;
   bStatsId?: string; // Optional bStats plugin ID for server usage tracking
 }
+
+export interface AboutPageConfig {
+  title: string;
+  logo?: string; // Optional logo path
+  content: string;
+}

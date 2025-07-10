@@ -1,51 +1,38 @@
-import { Button } from "@heroui/button";
 import { Card, CardBody } from "@heroui/card";
-import { Link } from "@heroui/link";
-
+import { Image } from "@heroui/image";
 import { title } from "@/components/primitives";
 import { siteConfig } from "@/config/site";
 
 export default function AboutPage() {
-  const { about } = siteConfig;
+  const aboutConfig = siteConfig.about;
 
-  // Only show coming soon mode for now
-  if (about.mode === "coming-soon") {
-    return (
-      <div className="max-w-4xl mx-auto py-16 px-4">
-        <div className="text-center">
-          <Card className="max-w-lg mx-auto">
-            <CardBody className="text-center py-12 px-8">
-              <div className="text-6xl mb-6">🚧</div>
-              <h1 className={title({ class: "mb-4" })}>
-                {about.comingSoon.title}
-              </h1>
-              <p className="text-lg text-default-500 mb-8">
-                {about.comingSoon.message}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                {about.comingSoon.buttons.map((button, index) => (
-                  <Button
-                    key={index}
-                    className="font-semibold"
-                    color={button.variant === "primary" ? "primary" : undefined}
-                    href={button.href}
-                    size="lg"
-                    variant={
-                      button.variant === "bordered" ? "bordered" : undefined
-                    }
-                    as={Link}
-                  >
-                    {button.text}
-                  </Button>
-                ))}
-              </div>
-            </CardBody>
-          </Card>
+  return (
+    <div className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+      <div className="inline-block max-w-xl text-center justify-center">
+        <div className="flex items-center justify-center gap-4 mb-2">
+          {aboutConfig.logo && (
+            <Image
+              alt="About logo"
+              height={70}
+              radius="sm"
+              src={aboutConfig.logo}
+              width={70}
+              className="flex-shrink-0"
+            />
+          )}
+          <h1 className={title()}>{aboutConfig.title}</h1>
         </div>
       </div>
-    );
-  }
 
-  // TODO: Add detailed about page when mode is "detailed"
-  return null;
+      <div className="mt-1 w-full max-w-4xl">
+        <Card className="py-4">
+          <CardBody className="text-center">
+            <p className="text-lg text-default-600 leading-relaxed">
+              {aboutConfig.content}
+            </p>
+          </CardBody>
+        </Card>
+      </div>
+    </div>
+  );
 }

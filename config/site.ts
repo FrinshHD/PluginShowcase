@@ -58,24 +58,10 @@ export const siteConfig = {
   },
 
   about: {
-    mode: "coming-soon",
-    comingSoon: {
-      title: "Coming Soon",
-      message:
-        "We're working on something amazing! Our About page will be available soon with detailed information about our team and mission.",
-      buttons: [
-        {
-          text: "Go Home",
-          href: "/",
-          variant: "primary",
-        },
-        {
-          text: "Browse Plugins",
-          href: "/plugins",
-          variant: "bordered",
-        },
-      ],
-    },
+    title: "About",
+    logo: "/images/logo.svg",
+    content:
+      "A modern, fully configurable Next.js template for showcasing plugins, tools, and projects. Built with TypeScript, Tailwind CSS, and HeroUI components.",
   },
 
   errorPages: {
