@@ -133,8 +133,8 @@ export const siteConfig = {
       {
         title: "Legal",
         links: [
-          { text: "Legal Notice", href: "/legalnotice" },
-          { text: "Privacy Policy", href: "/privacypolicy" },
+          { text: "Legal Notice", href: "/" },
+          { text: "Privacy Policy", href: "/" },
         ],
       },
     ],
